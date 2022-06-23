@@ -20,9 +20,10 @@ body {
     padding: 50px;
 }
 
+/* 
 .itemGalery .img {
     border-radius: 10px;
-}
+} */
 
 .descripcion {
     display: flex;
@@ -30,17 +31,6 @@ body {
     align-items: center;
     height: 100px;
     justify-content: space-between;
-}
-
-.botonComprar {
-    color:black;
-    font-size: 15px;
-    font-family: 'Nunito', sans-serif;
-    padding: .5rem;
-    width: 100px;
-    border: 1px solid black;
-    border-radius: 1rem;
-    background: none;
 }
 
 .divButton {
@@ -67,14 +57,12 @@ body {
 
      .section {
         margin-top: 50px;
-        margin-bottom: 50px;
     }
 
     .subtitulo {
-        padding: 5px;
+        padding-top: 5px;
         background-color: rgba(67, 67, 67, 0.439);
         border-bottom: 1px solid #000;
-        margin-top: 30px;
     }
 
 
@@ -101,7 +89,14 @@ body {
         line-height: 2.5;
     }
 
-    .botonComprar {
+
+
+
+
+
+
+    /* Reemplazado por Boostrap */
+    /* .botonComprar {
         color:black;
         font-size: 15px;
         font-family: 'Nunito', sans-serif;
@@ -110,7 +105,7 @@ body {
         border: 1px solid black;
         border-radius: 1rem;
         background: none;
-    }
+    } */
 
 
     
