@@ -27,7 +27,7 @@ body {
 }
 
 .checkbtn {
-    color: white;
+    color: black;
     line-height: 80px;
     left: 10px;
     top: 7px;
@@ -40,7 +40,9 @@ body {
     text-decoration: none;
 }
 
-.menu {
+
+.menu { /* REVISAR! */
+
     position: absolute;
     width: 100%;
     height: 50vw;
@@ -53,8 +55,8 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    /* border-bottom-right-radius: 30px;
-    border-bottom-left-radius: 30px; */
+    border-bottom-right-radius: 30px;
+    border-bottom-left-radius: 30px;
     border-radius: 40px;
     border: 1px solid;
     padding: 10px 0;
@@ -123,53 +125,37 @@ body {
     background-color: white;
 }
 
-
-.img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.grande {
-    padding: 20px;
-    display: grid;
-    grid-row-gap: 100px;
-    justify-items: center;
-
+.carousel {
+    margin: 50px 0;
 }
 
 
-              /* Revisar ya que reemplazo con boostrap */
-/* 
 .divButton {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 150px;
-} */
+    margin-top: 100px;
+    width: 30%;
+}
 
-/* .button {
-    width: 200px;
-    height: 40px;
-    border: none;
-    border-radius: .7rem;
-    background: #d4b8b8;
-    font-size: 15px;
-    font-family: 'Nunito', sans-serif;
-    font-weight: bold;
-} */
+.button {
+    color: black;
+    background-color: rgba(243, 199, 199, 0.863);
+    font-size: 20px;
+    border: 1px solid black;
+}
 
+.col {
+    margin: 10px;
+}
 
-
-
-
+.col img {
+    height: 100%;
+}
 
 
 .footer {
     padding-left: 20px;
     list-style-type: disc;
     line-height: 1.9;
+    margin-top: 100px;
 }
 
 
@@ -251,9 +237,9 @@ body {
         list-style: none;
     }
 
-    .navbar {
+    .navBar {
         position: absolute;
-        top: 90px;
+        top: 55px;
         width: 800px;
         /* width: 100%; */    
         display: flex;
@@ -270,7 +256,7 @@ body {
         left: 0;
         top: 0;
         line-height: 1;     
-        border: none;   
+        border: none;
     }
 
     .menu > li > a {
@@ -288,10 +274,9 @@ body {
         position: absolute;
         width: 150px;
         display: none;
-        line-height: 2;
+        line-height: 1.7;
         border-radius: 20px;
         text-align: start;
-        transform: translateY(-105px);
         padding-left: 20px;
     }
 
@@ -311,10 +296,6 @@ body {
         color: black;
     }
 
-    .accesorios {
-
-    }
-
     .titulo {
         width: 700px;
         height: 100px;
@@ -330,9 +311,6 @@ body {
         transform: translateY(-40px);
         display: flex;
         justify-content: space-between;
-    }
-
-    .header {
     }
 
     .iconos {
@@ -355,12 +333,6 @@ body {
         background-color: rgba(243, 199, 199, 0.863);
     }
 
-    .img {
-        width: auto;
-        height: auto;
-        object-fit: cover;
-    }
-
     .grande {
         padding-top: 100px;
         height: 400px;
@@ -370,7 +342,7 @@ body {
     }
 
     .divButton {
-        width: 50%;
+        width: 30%;
         padding: 100px 0;
     }
     
