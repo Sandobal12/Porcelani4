@@ -60,6 +60,7 @@ body {
     border-radius: 40px;
     border: 1px solid;
     padding: 10px 0;
+    z-index: 20;
 }
 
 .menu a:hover ~ .submenu {
@@ -90,7 +91,8 @@ body {
     position: fixed;
     right: 0;
     padding: 10px;
-    transform: translateY(10px);
+    transform: translateY(71px);
+    z-index: 10;
 }
 
 .logo {
@@ -118,9 +120,9 @@ body {
 
 .parallax { /* revisar */ /* crear parallax */
     background-image: url(./../Fotos/fondo2.jpeg);
-    height: 930px;
+    height: 100rem;
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: cover;
     background-position-x: center;
     background-color: white;
 }
@@ -132,7 +134,7 @@ body {
 
 .divButton {
     margin-top: 100px;
-    width: 30%;
+    width: 70%;
 }
 
 .button {
@@ -317,9 +319,10 @@ body {
         width: 100%;
         display: flex;
         justify-content: space-between;
+        transform: translateY(0);
         position: fixed;
         right: 0;
-        padding: 0 10px;
+        z-index: 20;
     }
 
     .logo:hover:hover {

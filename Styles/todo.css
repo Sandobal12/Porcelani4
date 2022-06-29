@@ -29,9 +29,16 @@ body {
     row-gap: 20px;
 }
 
+.card {
+    width: 80%;
+    height: 420px;
+    background-color: #e2dcdc;
+}
+
 .img {
     object-fit: cover;
     height: 70%;
+    border-radius: 5px;
 }
 
 .descripcion {
