@@ -11,49 +11,45 @@ body {
     color: black;
 }
 
-.galeria {
-    display: grid;
-    grid-row-gap: 50px;
-}
-
-.itemGalery {
-    padding: 50px;
-}
-
-.itemGalery .img {
-    border-radius: 10px;
-}
-
-.descripcion {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: 100px;
-    justify-content: space-between;
-}
-
-.botonComprar {
-    color:black;
-    font-size: 15px;
-    font-family: 'Nunito', sans-serif;
-    padding: .5rem;
-    width: 100px;
-    border: 1px solid black;
-    border-radius: 1rem;
-    background: none;
-}
 
 .divButton {
     margin-top: 90px;
 }
 
 .subtitulo {
-    display: flex;
-    justify-content: center;
     margin-top: 20px;
-    border-bottom: 1px solid;
+    padding-left: 10px;
     /* background: radial-gradient(#ca1d1d, rgba(243, 199, 199, 0.863) ); */
 }
+
+.galeria {
+    display: grid;
+    justify-items: center;
+    grid-template-columns: 1fr;
+    row-gap: 20px;
+}
+
+.card {
+    width: 80%;
+    height: 420px;
+    background-color: #e2dcdc;
+}
+
+.img {
+    object-fit: cover;
+    height: 70%;
+    border-radius: 5px;
+}
+
+.descripcion {
+    height: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+
+}
+
 
 .titulo a {
     text-decoration: none;
@@ -67,41 +63,41 @@ body {
 
      .section {
         margin-top: 50px;
-        margin-bottom: 50px;
     }
 
     .subtitulo {
-        padding: 5px;
-        background-color: rgba(67, 67, 67, 0.439);
-        border-bottom: 1px solid #000;
-        margin-top: 30px;
+        padding-top: 5px;
     }
 
 
     .galeria {
-        padding: 20px;
         display: grid;
+        justify-items: center;
         grid-template-columns: repeat(3, 1fr);
-        grid-auto-rows: 400px;
         grid-gap: 100px;
-        grid-row-gap: 150px;
-        margin-bottom: 100px;
     }
 
     .img {
-        width: 100%;
-        height: 100%;
         object-fit: cover;
+        height: 70%;
     }
 
     .descripcion {
-        margin-top: 10px;
-        display: block;
-        text-align: center;
-        line-height: 2.5;
+        height: 30%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+
     }
 
-    .botonComprar {
+
+
+
+
+
+
+    /* Reemplazado por Boostrap */
+    /* .botonComprar {
         color:black;
         font-size: 15px;
         font-family: 'Nunito', sans-serif;
@@ -110,7 +106,7 @@ body {
         border: 1px solid black;
         border-radius: 1rem;
         background: none;
-    }
+    } */
 
 
     
@@ -123,7 +119,6 @@ body {
     
     
 }
-
 
 
 
