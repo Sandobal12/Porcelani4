@@ -2,6 +2,7 @@
 
 
 
+
 * {
     margin: 0;
     padding: 0;
@@ -9,7 +10,7 @@
 }
 
 body { 
-    background-color: rgba(243, 199, 199, 0.863); 
+    background-color: $backgroundRosa; 
     font-family: 'Josefin Sans', sans-serif;
     text-decoration: none;
     color: black;
@@ -39,10 +40,6 @@ body {
     position: absolute;
 }
 
-.menu a {
-    color: black;
-    text-decoration: none;
-}
 
 
 .menu { /* REVISAR! */
@@ -50,7 +47,7 @@ body {
     position: absolute;
     width: 100%;
     height: 50vw;
-    background: rgb(243, 199, 199, 0.863);
+    background: $backgroundRosa;
     top: 80px;
     list-style: none;
     left: -100%;
@@ -65,11 +62,17 @@ body {
     border: 1px solid;
     padding: 10px 0;
     z-index: 20;
+    
+    a:hover ~ .submenu {
+        display: block;
+    }
+    a {
+        color: $black;
+        text-decoration: none;
+    }
 }
 
-.menu a:hover ~ .submenu {
-    display: block;
-}
+
 
 .submenu { /* revisar */
     list-style: none;
@@ -84,12 +87,6 @@ body {
     padding-top: .5rem;
 }
 
-/* .submenu li>a {
-    background: rgba(243, 199, 199, 0.911);
-    padding: 5px 8px;
-    border-radius: 10px;
-
-} */
 
 .iconos {
     position: fixed;
@@ -103,7 +100,7 @@ body {
     width: 40px;
     height: 40px;
     border-radius: 30%;
-    background-color: rgba(243, 199, 199, 0.863);
+    background-color: $backgroundRosa;
 }
 
 .titulo {
@@ -143,18 +140,20 @@ body {
 
 .button {
     color: black;
-    background-color: rgba(243, 199, 199, 0.863);
+    background-color: $backgroundRosa;
     font-size: 20px;
     border: 1px solid black;
 }
 
 .col {
     margin: 10px;
+    
+    img {
+        height: 100%;
+    }
 }
 
-.col img {
-    height: 100%;
-}
+
 
 
 .footer {
@@ -203,18 +202,18 @@ body {
 
 
 @media screen and (min-width: 768px) {
+
     .col {
         margin: 10px;
-    }
 
+        img {
+            height: 100%;
+        }
+    }
 
     .row {
         width: 85%;
         transform: translateX(108px);
-    }
-
-    .col img {
-        height: 100%;
     }
 
     .checkbtn {
@@ -270,10 +269,10 @@ body {
         padding: 15px 20px;
     }
 
-
-    /* .menu li:hover {
-        transform: scale(1.1);
-        transition: .5s;
+/* Puede ser interesante */
+    /* .menu li a:hover {
+        transform: scale(0.9);
+        transition: .3s;
     } */
 
     .submenu {
@@ -284,14 +283,15 @@ body {
         border-radius: 20px;
         text-align: start;
         padding-left: 20px;
+
+        a {
+            background-color: rgba(243, 199, 199, 0.911);
+            padding: 5px 8px;
+            border-radius: 10px;
+        }
     }
 
-    .submenu li>a {
-        background: rgba(243, 199, 199, 0.911);
-        padding: 5px 8px;
-        border-radius: 10px;
-
-    }
+    
     
     .menu li a:hover .submenu {
         display: block;
@@ -329,7 +329,7 @@ body {
         z-index: 20;
     }
 
-    .logo:hover:hover {
+    .logo:hover {
         transform: scale(1.1);
     }
 
@@ -337,7 +337,7 @@ body {
         width: 40px;
         height: 40px;
         border-radius: 30%;
-        background-color: rgba(243, 199, 199, 0.863);
+        background-color: $backgroundRosa;
     }
 
     .grande {
@@ -355,7 +355,7 @@ body {
     
     .button {
         color: black;
-        background-color: rgba(243, 199, 199, 0.863);
+        background-color: $backgroundRosa;
         font-size: 20px;
         border: 1px solid black;
     }
@@ -365,13 +365,184 @@ body {
         display: flex;
         justify-content: space-evenly;
         margin-bottom: 20px;
+
+        li {
+            list-style: disc;
+        }
     }
 
-    .footer li {
-        list-style: disc;
-    }
 
 }
+
+
+
+
+
+
+
+
+
+
+                                                                                /* CSS DE TODO.HTML */
+
+
+.divButton {
+    margin-top: 90px;
+}
+
+.subtitulo {
+    margin-top: 20px;
+    padding-left: 10px;
+    /* background: radial-gradient(#ca1d1d, rgba(243, 199, 199, 0.863) ); */
+}
+
+.galeria {
+    display: grid;
+    justify-items: center;
+    grid-template-columns: 1fr;
+    row-gap: 20px;
+}
+
+.card {
+    width: 80%;
+    height: 420px;
+    background-color: #e2dcdc;
+}
+
+.img {
+    object-fit: cover;
+    height: 70%;
+    border-radius: 5px;
+}
+
+.descripcion {
+    height: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+
+}
+
+
+.titulo a {
+    text-decoration: none;
+    color: black;
+}
+
+
+@media screen and (min-width: 768px) {
+
+
+
+     .section {
+        margin-top: 50px;
+    }
+
+    .subtitulo {
+        padding-top: 5px;
+    }
+
+
+    .galeria {
+        display: grid;
+        justify-items: center;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 100px;
+    }
+
+    .img {
+        object-fit: cover;
+        height: 70%;
+    }
+
+    .descripcion {
+        height: 30%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+
+    }
+
+
+
+
+
+
+
+    /* Reemplazado por Boostrap */
+    /* .botonComprar {
+        color:black;
+        font-size: 15px;
+        font-family: 'Nunito', sans-serif;
+        padding: .5rem;
+        width: 100px;
+        border: 1px solid black;
+        border-radius: 1rem;
+        background: none;
+    } */
+
+
+    
+
+
+
+    
+
+    
+    
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
