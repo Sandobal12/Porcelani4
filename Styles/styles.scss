@@ -1,5 +1,5 @@
 @import "./Scss/colors";
-
+@import "./Scss/variables";
 
 
 
@@ -19,7 +19,7 @@ body {
 #header {
     display: flex;
     justify-content: center;
-    height: 80px;
+    @include alto(80px);
 }
 
 
@@ -37,15 +37,15 @@ body {
     left: 10px;
     top: 7px;
     cursor: pointer;
-    position: absolute;
+    position: map-get($maps, position);
 }
 
 
 
 .menu { /* REVISAR! */
 
-    position: absolute;
-    width: 100%;
+    position: map-get($maps, position);
+    @include ancho(100%);
     height: 50vw;
     background: $backgroundRosa;
     top: 80px;
@@ -64,7 +64,7 @@ body {
     z-index: 20;
     
     a:hover ~ .submenu {
-        display: block;
+        display: map-get($maps, display);
     }
     a {
         color: $black;
@@ -77,9 +77,9 @@ body {
 .submenu { /* revisar */
     list-style: none;
     display: none;
-    position: absolute;
-    width: 100%;
-    height: 80px;
+    position: map-get($maps, position);
+    @include ancho(100%);
+    @include alto(80px);
     text-align: center;
     align-content: center;
     line-height: 2;
@@ -87,6 +87,9 @@ body {
     padding-top: .5rem;
 }
 
+.submenu2 {
+    @extend .submenu;
+}
 
 .iconos {
     position: fixed;
@@ -97,14 +100,14 @@ body {
 }
 
 .logo {
-    width: 40px;
-    height: 40px;
+    @include ancho(40px);
+    @include alto(40px);
     border-radius: 30%;
     background-color: $backgroundRosa;
 }
 
 .titulo {
-    height: 100%;
+    @include alto(100%);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -113,7 +116,7 @@ body {
 }
 
 .spans {
-    width: 300px;
+    @include ancho(300px);
     display: flex;
     justify-content: space-between;
     transform: translateY(-25px);
@@ -121,7 +124,7 @@ body {
 
 .parallax { /* revisar */ /* crear parallax */
     background-image: url(./../Fotos/fondo2.jpeg);
-    height: 100rem;
+    @include alto(100rem);
     background-repeat: no-repeat;
     background-size: cover;
     background-position-x: center;
@@ -135,11 +138,11 @@ body {
 
 .divButton {
     margin-top: 100px;
-    width: 70%;
+    @include ancho(70%);
 }
 
 .button {
-    color: black;
+    color: $black;
     background-color: $backgroundRosa;
     font-size: 20px;
     border: 1px solid black;
@@ -149,7 +152,7 @@ body {
     margin: 10px;
     
     img {
-        height: 100%;
+        @include alto(100%);
     }
 }
 
@@ -163,6 +166,34 @@ body {
     margin-top: 100px;
 }
 
+.redesSociales {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.twitter {
+    border: 2px solid;
+    border-radius: 100px;
+    background-color: white;
+    @include ancho(100px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5px;
+    color: #00acee;
+    cursor: pointer;
+}
+
+.facebook {
+    @extend .twitter;
+    color: #3b5998;
+}
+
+.tikTok {
+    @extend .twitter; 
+    color: #ff0050;
+}
 
 
 
@@ -207,12 +238,12 @@ body {
         margin: 10px;
 
         img {
-            height: 100%;
+            @include alto(100%);
         }
     }
 
     .row {
-        width: 85%;
+        @include ancho(85%);
         transform: translateX(108px);
     }
 
@@ -221,7 +252,7 @@ body {
     }
 
     #header {
-        height: 100px;
+        @include alto(100px);
         display: flex;
         flex-wrap: nowrap;
         justify-content: center;
@@ -232,7 +263,7 @@ body {
 
     .parallax {
         background-image: url(../Fotos/fondo.jpeg);
-        height: 600px;
+        @include alto(600px);
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center
@@ -243,9 +274,9 @@ body {
     }
 
     .navBar {
-        position: absolute;
+        position: map-get($maps, position);
         top: 55px;
-        width: 800px;
+        @include ancho(800px);
         /* width: 100%; */    
         display: flex;
         justify-content: space-between;
@@ -253,7 +284,7 @@ body {
 
     .menu {
         color: black;
-        height: 200px;
+        @include alto(200px);
         display: flex;
         flex-direction: row;
         justify-content: space-between; 
@@ -265,7 +296,7 @@ body {
     }
 
     .menu > li > a {
-        display: block;
+        display: map-get($maps, display);
         padding: 15px 20px;
     }
 
@@ -276,8 +307,8 @@ body {
     } */
 
     .submenu {
-        position: absolute;
-        width: 150px;
+        position: map-get($maps, position);
+        @include ancho(150px);
         display: none;
         line-height: 1.7;
         border-radius: 20px;
@@ -290,11 +321,10 @@ body {
             border-radius: 10px;
         }
     }
-
     
     
     .menu li a:hover .submenu {
-        display: block;
+        display: map-get($maps, display);
     }
 
     a {
@@ -303,8 +333,8 @@ body {
     }
 
     .titulo {
-        width: 700px;
-        height: 100px;
+        @include ancho(700px);
+        @include alto(100px);
         display: flex;
         flex-direction: column;
         justify-content: space-evenly;
@@ -313,14 +343,14 @@ body {
     }
 
     .spans {
-        width: 500px;
+        @include ancho(500px);
         transform: translateY(-40px);
         display: flex;
         justify-content: space-between;
     }
 
     .iconos {
-        width: 100%;
+        @include ancho(100%);
         display: flex;
         justify-content: space-between;
         transform: translateY(0);
@@ -334,22 +364,22 @@ body {
     }
 
     .logo {
-        width: 40px;
-        height: 40px;
+        @include ancho(40px);
+        @include alto(40px);
         border-radius: 30%;
         background-color: $backgroundRosa;
     }
 
     .grande {
         padding-top: 100px;
-        height: 400px;
-        width: 100%;
+        @include ancho(100%);
+        @include alto(400px);
         display: flex;
         justify-content: space-around;
     }
 
     .divButton {
-        width: 30%;
+        @include ancho(30%);
         padding: 100px 0;
     }
     
@@ -361,7 +391,7 @@ body {
     }
 
     .footer {
-        width: 100%;
+        @include ancho(100%);
         display: flex;
         justify-content: space-evenly;
         margin-bottom: 20px;
@@ -404,19 +434,19 @@ body {
 }
 
 .card {
-    width: 80%;
-    height: 420px;
+    @include ancho(80%);
+    @include alto(420px);
     background-color: #e2dcdc;
 }
 
 .img {
     object-fit: cover;
-    height: 70%;
+    @include alto(70%);
     border-radius: 5px;
 }
 
 .descripcion {
-    height: 30%;
+    @include alto(30%);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -453,11 +483,11 @@ body {
 
     .img {
         object-fit: cover;
-        height: 70%;
+        @include alto(70%);
     }
 
     .descripcion {
-        height: 30%;
+        @include alto(30%);
         display: flex;
         flex-direction: column;
         justify-content: space-around;

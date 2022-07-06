@@ -54,7 +54,7 @@ body {
   padding: 10px 0;
   z-index: 20;
 }
-.menu a:hover ~ .submenu {
+.menu a:hover ~ .submenu, .menu a:hover ~ .submenu2 {
   display: block;
 }
 .menu a {
@@ -62,7 +62,7 @@ body {
   text-decoration: none;
 }
 
-.submenu { /* revisar */
+.submenu, .submenu2 { /* revisar */
   list-style: none;
   display: none;
   position: absolute;
@@ -125,7 +125,7 @@ body {
 }
 
 .button {
-  color: black;
+  color: #000000;
   background-color: rgba(243, 199, 199, 0.863);
   font-size: 20px;
   border: 1px solid black;
@@ -143,6 +143,33 @@ body {
   list-style-type: disc;
   line-height: 1.9;
   margin-top: 100px;
+}
+
+.redesSociales {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.twitter, .tikTok, .facebook {
+  border: 2px solid;
+  border-radius: 100px;
+  background-color: white;
+  width: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 5px;
+  color: #00acee;
+  cursor: pointer;
+}
+
+.facebook {
+  color: #3b5998;
+}
+
+.tikTok {
+  color: #ff0050;
 }
 
 @media screen and (min-width: 768px) {
@@ -206,7 +233,7 @@ body {
       transform: scale(0.9);
       transition: .3s;
   } */
-  .submenu {
+  .submenu, .submenu2 {
     position: absolute;
     width: 150px;
     display: none;
@@ -215,12 +242,12 @@ body {
     text-align: start;
     padding-left: 20px;
   }
-  .submenu a {
+  .submenu a, .submenu2 a {
     background-color: rgba(243, 199, 199, 0.911);
     padding: 5px 8px;
     border-radius: 10px;
   }
-  .menu li a:hover .submenu {
+  .menu li a:hover .submenu, .menu li a:hover .submenu2 {
     display: block;
   }
   a {
@@ -261,8 +288,8 @@ body {
   }
   .grande {
     padding-top: 100px;
-    height: 400px;
     width: 100%;
+    height: 400px;
     display: flex;
     justify-content: space-around;
   }
