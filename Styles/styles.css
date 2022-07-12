@@ -27,14 +27,20 @@ body {
 
 .checkbtn {
   color: black;
-  line-height: 80px;
+  line-height: 50px;
   left: 10px;
   top: 7px;
   cursor: pointer;
   position: absolute;
 }
 
-.menu { /* REVISAR! */
+@media screen and (max-width: 400px) {
+  .checkbtn {
+    line-height: 10px;
+  }
+}
+.menu {
+  /* REVISAR! */
   position: absolute;
   width: 100%;
   height: 50vw;
@@ -62,7 +68,8 @@ body {
   text-decoration: none;
 }
 
-.submenu, .submenu2 { /* revisar */
+.submenu, .submenu2 {
+  /* revisar */
   list-style: none;
   display: none;
   position: absolute;
@@ -106,7 +113,9 @@ body {
   transform: translateY(-25px);
 }
 
-.parallax { /* revisar */ /* crear parallax */
+.parallax {
+  /* revisar */
+  /* crear parallax */
   background-image: url(./../Fotos/fondo2.jpeg);
   height: 100rem;
   background-repeat: no-repeat;
@@ -146,8 +155,11 @@ body {
 }
 
 .redesSociales {
+  margin-top: 100px;
+  width: 100%;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
 }
 
@@ -179,13 +191,16 @@ body {
   .col img {
     height: 100%;
   }
+
   .row {
     width: 85%;
     transform: translateX(108px);
   }
+
   .checkbtn {
     display: none;
   }
+
   #header {
     height: 100px;
     display: flex;
@@ -194,6 +209,7 @@ body {
     flex-direction: row;
     align-items: center;
   }
+
   .parallax {
     background-image: url(../Fotos/fondo.jpeg);
     height: 600px;
@@ -201,9 +217,11 @@ body {
     background-size: cover;
     background-position: center;
   }
+
   li {
     list-style: none;
   }
+
   .navBar {
     position: absolute;
     top: 55px;
@@ -212,6 +230,7 @@ body {
     display: flex;
     justify-content: space-between;
   }
+
   .menu {
     color: black;
     height: 200px;
@@ -224,10 +243,12 @@ body {
     line-height: 1;
     border: none;
   }
+
   .menu > li > a {
     display: block;
     padding: 15px 20px;
   }
+
   /* Puede ser interesante */
   /* .menu li a:hover {
       transform: scale(0.9);
@@ -247,13 +268,16 @@ body {
     padding: 5px 8px;
     border-radius: 10px;
   }
+
   .menu li a:hover .submenu, .menu li a:hover .submenu2 {
     display: block;
   }
+
   a {
     text-decoration: none;
     color: black;
   }
+
   .titulo {
     width: 700px;
     height: 100px;
@@ -262,12 +286,14 @@ body {
     justify-content: space-evenly;
     align-items: center;
   }
+
   .spans {
     width: 500px;
     transform: translateY(-40px);
     display: flex;
     justify-content: space-between;
   }
+
   .iconos {
     width: 100%;
     display: flex;
@@ -277,15 +303,18 @@ body {
     right: 0;
     z-index: 20;
   }
+
   .logo:hover {
     transform: scale(1.1);
   }
+
   .logo {
     width: 40px;
     height: 40px;
     border-radius: 30%;
     background-color: rgba(243, 199, 199, 0.863);
   }
+
   .grande {
     padding-top: 100px;
     width: 100%;
@@ -293,16 +322,19 @@ body {
     display: flex;
     justify-content: space-around;
   }
+
   .divButton {
     width: 30%;
     padding: 100px 0;
   }
+
   .button {
     color: black;
     background-color: rgba(243, 199, 199, 0.863);
     font-size: 20px;
     border: 1px solid black;
   }
+
   .footer {
     width: 100%;
     display: flex;
@@ -338,7 +370,8 @@ body {
 }
 
 .img {
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   height: 70%;
   border-radius: 5px;
 }
@@ -360,25 +393,31 @@ body {
   .section {
     margin-top: 50px;
   }
+
   .subtitulo {
     padding-top: 5px;
   }
+
   .galeria {
     display: grid;
     justify-items: center;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 100px;
   }
+
   .img {
-    object-fit: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
     height: 70%;
   }
+
   .descripcion {
     height: 30%;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
   }
+
   /* Reemplazado por Boostrap */
   /* .botonComprar {
       color:black;
@@ -390,6 +429,4 @@ body {
       border-radius: 1rem;
       background: none;
   } */
-}
-
-/*# sourceMappingURL=styles.css.map */
+}/*# sourceMappingURL=styles.css.map */
