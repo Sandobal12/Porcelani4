@@ -179,31 +179,28 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-}
 
-.twitter {
-    border: 2px solid;
-    border-radius: 100px;
-    background-color: white;
-    @include ancho(100px);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 5px;
-    color: #00acee;
-    cursor: pointer;
+    .twitter {
+        border: 2px solid;
+        border-radius: 100px;
+        background-color: white;
+        @include ancho(100px);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 5px;
+        color: #00acee;
+        cursor: pointer;
+    }
+    .facebook {
+        @extend .twitter;
+        color: #3b5998;
+    }
+    .tikTok {
+        @extend .twitter; 
+        color: #ff0050;
+    }
 }
-
-.facebook {
-    @extend .twitter;
-    color: #3b5998;
-}
-
-.tikTok {
-    @extend .twitter; 
-    color: #ff0050;
-}
-
 
 
 
@@ -649,5 +646,3 @@ body {
 
 
 
-
->>>>>>> Rama-1
