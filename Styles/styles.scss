@@ -283,7 +283,6 @@ body {
         position: map-get($maps, position);
         top: 55px;
         @include ancho(800px);
-        /* width: 100%; */    
         display: flex;
         justify-content: space-between;
     }
@@ -306,11 +305,6 @@ body {
         padding: 15px 20px;
     }
 
-/* Puede ser interesante */
-    /* .menu li a:hover {
-        transform: scale(0.9);
-        transition: .3s;
-    } */
 
     .submenu {
         position: map-get($maps, position);
@@ -429,7 +423,6 @@ body {
 .subtitulo {
     margin-top: 20px;
     padding-left: 10px;
-    /* background: radial-gradient(#ca1d1d, rgba(243, 199, 199, 0.863) ); */
 }
 
 .galeria {
@@ -500,30 +493,7 @@ body {
 
     }
 
-
-
-
-
-
-
-    /* Reemplazado por Boostrap */
-    /* .botonComprar {
-        color:black;
-        font-size: 15px;
-        font-family: 'Nunito', sans-serif;
-        padding: .5rem;
-        width: 100px;
-        border: 1px solid black;
-        border-radius: 1rem;
-        background: none;
-    } */
-
-
-    
-
-
-
-    
+  
 
     
     
